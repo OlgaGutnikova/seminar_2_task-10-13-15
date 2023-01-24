@@ -3,6 +3,17 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
+
+//Функция создания массива
+int[] generateArray(int length)
+{
+    int[] result = new int[length];
+    for (int i = 0; i < length; i++)
+    {
+        result[i] = new Random().Next(100);
+    }
+    return result;
+}
 //Функция ввода данных
 int getUserNumber(string message)
 {
@@ -10,16 +21,7 @@ int getUserNumber(string message)
     int result = int.Parse(Console.ReadLine()!);
     return result;
 }
-//Функция создания массива
-int[] generateArray(int length)
-{
-    int[] result = new int[length];
-    for (int i = 0; i < length; i++)
-    {
-        result[i] = new Random().Next(-100, 100);
-    }
-    return result;
-}
+
 //Функция печати массива
 void printArray(int[] array)
 {
